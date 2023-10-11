@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form id="signin-form">
+            <div class="form-group">
+                <label for="signin-username">Username</label>
+                <input type="text" id="signin-username" required>
+            </div>
+            <div class="form-group">
+                <label for="signin-password">Password</label>
+                <input type="password" id="signin-password" required>
+            </div>
+            <button class="btn" type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <script>
+        const signinForm = document.getElementById('signin-form');
+
+        signinForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            // You can add your sign-in logic here
+            const username = document.getElementById('signin-username').value;
+            const password = document.getElementById('signin-password').value;
+
+            // For a basic example, you can check if the username and password match some predefined values
+            if (username === 'yourUsername' && password === 'yourPassword') {
+                alert('Sign-in successful');
+            } else {
+                alert('Sign-in failed. Please check your username and password.');
+            }
+        });
+    </script>
+</body>
+</html>
